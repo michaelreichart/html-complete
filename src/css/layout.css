@@ -1,0 +1,52 @@
+/**
+ * LAYOUT DEFINITIONS
+ * ...
+ */
+
+/* LAYOUT für Standardbildschirme */
+div { background : rgba(0,0,0,0.15); }
+
+@media screen {
+	.page {
+	 	display : block;
+	 	width   : 960px;
+	 	margin  : 0 auto; 	/* zentriert das .page-Element */
+	}
+	.header {
+	 	display : block;
+	 	clear   : both;		/* Hebt float Attribute von Vorgängerelementen
+	 						   wieder auf, das Element steht in einer 
+	 						   neuen Zeile. */
+	}
+	.nav {
+	 	display : block;
+	 	float   : left;		/* Macht ein Element schwebend 
+	 						   und richtet es nach links aus */
+	 	width   : 20%;		/* Legt die Elementebreite auf 25% fest */
+	}
+	.content {
+	 	display : block;
+	 	float   : left;
+
+	 	width   : 70%;
+	}
+	.footer {
+	 	display : block;
+	 	clear   : both;
+	}
+}
+@media screen and (max-width:479px) {
+	.page {
+		width : 100%;
+		background : orange;
+	}
+	.nav, .content {
+		float : none;
+		width : 100%;
+	}
+	.header, .footer {
+		clear : none;
+		width : 100%;
+	}
+}
+
