@@ -1,13 +1,17 @@
-<!DOCTYPE HTML PUBLIC 
-	"-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC 
+	"-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html lang="de">	
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width;initial-scale=1.0">
 		
 	<title>Meine HTML Seite</title>
+	<link rel="stylesheet" type="text/css" href="lib/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="src/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="src/css/modules.css">
+	<link rel="stylesheet" type="text/css" href="src/css/state.css">
+	<link rel="stylesheet" type="text/css" href="src/css/theme.css">
 </head>
 <body>
 		
@@ -15,28 +19,81 @@
 		<div class="header">
 		<div class="brand">firma</div>
 				<!-- Modul für Navigation -->
-		<nav>	
-		<ul>
-			<li><a href="#">Linktext</a></li>
-			<li><a href="#">Linktext</a></li>
-			<li><a href="#">Linktext</a></li>
-		</ul>
-		</nav>	
+		
+		<div class="nav-horizontal">
+			<nav>	
+			<ul>
+				<li><a href="#">Linktext</a></li>
+				<li><a href="#">Linktext</a></li>
+				<li><a href="#">Linktext</a></li>
+			</ul>
+			</nav>
+		</div>
+		
+		<form action="server.php">
+			
+			<fieldset>
+				<legend>Login</legend>
+				
+				<!-- GUI Element Gruppe -->
+				<div class="f-text">
+					<label for="email">E-Mail</label>
+					<input type="text" id="email" name="email" />
+				</div>
+				
+				<div class="f-text">
+					<label for="password">Passwort</label>
+					<input type="password" id="password" name="password" />
+				</div>
+				
+				<div class="f-button>">
+					<input type="submit" value="einloggen" />
+				</div>
+			
+			</fieldset>
+			
+		</form>
 			
 		</div>
 		
 		<div class="nav">
 			
-		<!-- Modul für Navigation -->
-		<nav>	
-		<h2>Hauptnavigation</h2>
-		<ul>
-			<li><a href="#">Linktext</a></li>
-			<li><a href="#">Linktext</a></li>
-			<li><a href="#">Linktext</a></li>
-		</ul>
-		</nav>
 		
+		<!-- Modul für Anmeldung -->
+		<form action="server.php">
+			
+			<fieldset>
+				<legend>Login</legend>
+				
+				<!-- GUI Element Gruppe -->
+				<div class="f-text">
+					<label for="email">E-Mail</label>
+					<input type="text" id="email" name="email" />
+				</div>
+				
+				<div class="f-text">
+					<label for="password">Passwort</label>
+					<input type="password" id="password" name="password" />
+				</div>
+				
+				<div class="f-button>">
+					<input type="submit" value="einloggen" />
+				</div>
+			</fieldset>
+				
+		</form>
+		
+		<!-- Modul für Navigation -->
+		<div class="nav-vertical">
+			<nav>	
+			<h2>Hauptnavigation</h2>
+			<ul>
+				<li><a href="#">Linktext</a></li>
+				<li><a href="#">Linktext</a></li>
+				<li><a href="#">Linktext</a></li>
+			</ul>
+			</nav>
+		</div>
 		</div>
 		
 		<div class="content">
@@ -52,6 +109,125 @@
 			<img src="src/img/images.jpg" alt="Bildbeschreibung">
 				
 			<a href="link_zur_datei.html">Zu einer anderen Datei</a>
+			
+			<table>
+				<caption>Tabellen&uuml;berschrift</caption>
+				<thead>
+					<tr>
+						<th>Tabellenkopf 1</th>
+						<th>Tabellenkopf 2</th>
+						<th colspan="2">Tabellenkopf 3</th>
+						<th>Tabellenkopf 5</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="5">Tabellenfu&szlig;</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>Tabellendaten 1</td>
+						<td>Tabellendaten 2</td>
+						<td>Tabellendaten 3</td>
+						<td>Tabellendaten 4</td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<form action="server.php">
+				<fieldset>
+					<legend>Weitere Elemente in HTML 4 und 5</legend>
+					
+					<!-- f-checkbox-group -->
+					<div class="f-checkbox-group">
+						<!-- Checkboxen -->
+						<div class="f-checkbox">
+							<input type="checkbox" id="checkbox1"
+								   name="checkbox[]" value="eigener Wert 1" />
+							<label for="checkbox1">Wert 1 Anzeige</label>
+						</div>
+						<div class="f-checkbox">
+							<input type="checkbox" id="checkbox2"
+								   name="checkbox[]" value="eigener Wert 2" />
+							<label for="checkbox2">Wert 2 Anzeige</label>
+						</div>
+					</div>
+					
+					
+					<select name="list" id="list">
+						<option value="">Bitte hier auswählen ...</option>
+						<optgroup>
+							<option value="Wert 1">Angezeigter Wert 1</option>
+							<option value="Wert 2">Angezeigter Wert 2</option>
+							<option value="Wert 3">Angezeigter Wert 3</option>
+						</optgroup>
+						<optgroup>
+							<option value="Wert 4">Angezeigter Wert 4</option>
+							<option value="Wert 5">Angezeigter Wert 5</option>
+							<option value="Wert 6">Angezeigter Wert 6</option>
+						</optgroup>
+					</select>
+
+
+					<select name="list2" id="list2" size="8" multiple="multiple">
+						<optgroup>
+							<option value="Wert 1">Angezeigter Wert 1</option>
+							<option value="Wert 2">Angezeigter Wert 2</option>
+							<option value="Wert 3">Angezeigter Wert 3</option>
+						</optgroup>
+						<optgroup>
+							<option value="Wert 4">Angezeigter Wert 4</option>
+							<option value="Wert 5">Angezeigter Wert 5</option>
+							<option value="Wert 6">Angezeigter Wert 6 mit noch mehr Text in der Zeile.</option>
+						</optgroup>
+					</select>
+					
+					
+					<!-- HTML5: Emaileingabe -->
+					<style>
+					[type=email]:invalid { border: 2px solid red;};
+					[type=email]:valid { border: 2px solid green;};
+					</style>
+					<label for="email">EMail</label>
+					<input type="email" list="emaillist"
+
+					placeholder="Ihre Emailadresse hier ..."
+					autocomplete="off"
+					required="required"
+					autofocus="autofocus"
+					
+					/>
+					<!-- HTML5: Datalist -->
+					<datalist id="emaillist">
+						<option value="michael@zenbox.de" />
+						<option value="berta@zenbox.de" />
+						<option value="karl@zenbox.de" />
+					</datalist>		
+					
+					<!-- HTML5: Datumseingabe -->
+					<label for="date">Datum</label>
+					<input type="date"/>	
+
+					<!-- HTML5: Farbeingabe -->
+					<label for="color">Farbe</label>
+					<input type="color" onchange="document.body"/>	
+
+					<!-- HTML5: Url-eingabe -->
+					<label for="url">URL</label>
+					<input type="url"/>	
+					
+					<input type="submit" />
+					
+			</fieldset>
+			</form>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
 		</div>
 		
 		<div class="footer">
@@ -67,3 +243,18 @@
 	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

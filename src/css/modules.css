@@ -1,0 +1,31 @@
+/**
+ * Module
+ * ...
+ */
+
+
+/* Navigation */
+nav ul, nav ul li {
+	margin  : 0;
+	padding : 0;
+	list-style : none;
+
+}
+.nav-vertical nav ul li {
+	display : block;
+	width   : 100%;
+}
+.nav-horizontal nav ul li {
+	display : inline-block;
+	width   : auto;
+}
+
+
+
+	<nav>	
+		<ul>
+			<li><a href="#">Linktext</a></li>
+			<li><a href="#">Linktext</a></li>
+			<li><a href="#">Linktext</a></li>
+		</ul>
+	</nav>
